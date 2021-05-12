@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+struct employee
+{
+  char name[20];
+  int salary;
+  int idno;
+};
+
+void fun(struct employee *);
+
+int
+main ()
+{
+  struct employee data = { "govardhan", 90000, 123 };
+
+  fun (&data);
+
+  return 0;
+}
+
+
+void fun (struct employee *ptr)
+{
+  printf ("name=%s\n", ptr->name);
+  printf ("salary=%d\n", ptr->salary);
+  printf ("idno=%d\n", ptr->idno);
+
+}
