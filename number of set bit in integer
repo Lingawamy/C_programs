@@ -1,0 +1,18 @@
+#include<stdio.h>
+int fun(int n);
+
+int main()
+{
+    int n=3;
+    printf("setbit=%d\n",fun(n));
+}
+int fun(int n)
+{
+    int count=0;
+    while(n!=0)
+    {
+        n&=(n-1);
+        count++;
+     }
+     return count;
+}
