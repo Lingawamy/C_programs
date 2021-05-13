@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[]={5,2,2,4,5,4,6},i,j,len,n,count=0;
+    len=sizeof(a)/sizeof(a[0]);
+    printf("len=%d\n",len);
+    for(i=0;i<len;i++)
+    {
+        for(j=i+1;j<len;j++)
+        {
+            if((a[i]+a[j])==10)
+            {
+                n=(a[i]+a[j]);
+                printf("paired number %d+%d=%d\n",a[i],a[j],n);
+                count++;
+            }
+        }
+    }
+    printf("number of pairs is =%d",count);
+    printf("Hello World");
+
+    return 0;
+}
