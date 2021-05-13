@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+void copystr(char *sourcestr,char *targetstr);
+
+int main()
+{
+    char sourcestr[15]="Redpinesignals";
+    char targetstr[15];
+    
+    printf("sourcestr=%s\n",sourcestr);
+    copystr(sourcestr,targetstr);
+    printf("targetstr=%s\n",targetstr);
+}
+
+void copystr(char *sourcestr, char *targetstr)
+{
+    while(*sourcestr != '\0')
+    {
+        *targetstr = *sourcestr;
+          sourcestr++;
+          targetstr++;
+    }
+    *targetstr='\0';
+}
