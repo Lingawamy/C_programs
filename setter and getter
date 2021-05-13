@@ -1,0 +1,23 @@
+#include<stdio.h>
+//setter funtion prototype
+void setvalue(int);
+//getter funtion prototype
+int getvalue(void);
+
+static int x;
+
+int main()
+{
+    setvalue(10);
+    printf("retrive=%d\n",getvalue());
+    
+}
+//setter API
+void setvalue(int value)
+{
+    x=value;
+}
+int getvalue(void)
+{
+    return x;
+}
